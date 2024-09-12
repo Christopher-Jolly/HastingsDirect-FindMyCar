@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    @apply h-full; /* Ensures the html and body cover the full height */
+    background-color: #011831; /* Sets the background to your dark blue */
+    overflow: auto; /* Ensure scrolling is enabled */
+  }
+  body {
+    @apply bg-background text-foreground;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Horizontally center the container */
+    align-items: center; /* Vertically center the container */
+    min-height: 100vh; /* Ensure body takes full viewport height */
+    margin: 0; /* Remove default margin */
+    flex-direction: column; /* Allow vertical stacking */
+
+  }
+}
+
+/* Hide scrollbar for WebKit browsers */
+body::-webkit-scrollbar {
+  display: none; /* Hides the scrollbar */
+}
+
+.text-header { /* Find My Car */
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.container {
+  transform: translateX(0px); /* Adjust this value to move the container to the right */
+  margin-top: -95px; /* Move container up */
+}
+
+.form-container {
+  width: 80vw; /* Width based on viewport width */
+  max-width: 500px; /* Maximum width */
+  min-width: 499px; /* Minimum width */
+  padding: 2vw;   /* Padding based on viewport width */
+  background: white; /* Ensure background is visible */
+  border-radius: 10px; /* Rounded corners for aesthetics */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Longer shadow around all edges */
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    padding: 3vw; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    padding: 4vw; /* Further adjust padding for mobile screens */
+  }
+}
+
+.card-footer {
+  display: flex;
+  justify-content: flex-end; /* Aligns button to the right */
+  align-items: center; /* Vertically centers the button */
+  padding-top: 20px; /* You can adjust this or remove if necessary */
+}
+
+.delete_button{
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Longer shadow around all edges */
+}
+
+.submit_button{
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Longer shadow around all edges */
+}
